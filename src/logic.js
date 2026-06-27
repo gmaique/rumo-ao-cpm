@@ -23,7 +23,7 @@ export function faseRetaFinal(hojeISO, dataProva = DATA_PROVA) {
 
 export const NOMES_CONQUISTAS = {
   'primeiro-passo': '🚀 Primeiro passo',
-  'q-100': '💯 Centurião (100 questões)',
+  'q-100': '💯 Cem questões respondidas!',
   'streak-7': '🔥 Semana perfeita (7 dias)',
 };
 
@@ -33,10 +33,15 @@ export function addDias(iso, n) {
   return dt.toISOString().slice(0, 10);
 }
 
-export function srsNext(item, acertou, hojeISO) {
+export function srsNext(item, acertou, hojeISO, dataProva = DATA_PROVA) {
   const atual = item?.caixa ?? 1;
   const caixa = acertou ? Math.min(atual + 1, 5) : 1;
-  return { caixa, proximaRevisao: addDias(hojeISO, INTERVALOS[caixa - 1]) };
+  let intervalo = INTERVALOS[caixa - 1];
+  // Teto perto da prova: nunca agendar além de ~80% do tempo que falta,
+  // pra questão "dominada" não sumir e deixar de ser revisada antes do dia.
+  const faltam = diasAteProva(hojeISO, dataProva);
+  if (faltam > 1) intervalo = Math.min(intervalo, Math.max(1, Math.floor(faltam * 0.8)));
+  return { caixa, proximaRevisao: addDias(hojeISO, intervalo) };
 }
 
 export function estaVencida(item, hojeISO) {
@@ -95,12 +100,27 @@ export function bumpStreak(state, hojeISO) {
   return { streak: 1, ultimoDia: hojeISO, freezesUsadosSemana: freezesValidos, semanaFreeze: sem };
 }
 
+// Intercala questões por tema (interleaving): evita blocos da mesma matéria seguidos
+export function intercalarPorTema(arr) {
+  const porTema = {};
+  for (const q of arr) (porTema[q.tema] ??= []).push(q);
+  const filas = Object.values(porTema);
+  const out = [];
+  let restam = true;
+  while (restam) {
+    restam = false;
+    for (const f of filas) if (f.length) { out.push(f.shift()); restam = true; }
+  }
+  return out;
+}
+
 export function montarFila(questoes, srsMap, hojeISO, meta) {
   const vencidas = questoes
     .filter(q => srsMap[q.id] && estaVencida(srsMap[q.id], hojeISO))
     .sort((a, b) => (srsMap[a.id].proximaRevisao).localeCompare(srsMap[b.id].proximaRevisao));
   const novas = questoes.filter(q => !srsMap[q.id]);
-  return [...vencidas, ...novas].slice(0, meta);
+  const selec = [...vencidas, ...novas].slice(0, meta);
+  return intercalarPorTema(selec); // interleaving dentro da sessão
 }
 
 export function checarConquistas(estado) {
@@ -134,4 +154,55 @@ export function proficienciaGlobal(estado, questoes) {
     den += q.dificuldade * (r.acertos + r.erros);
   }
   return den ? Math.round(num / den * 100) : null;
+}
+
+// ===== Plano de Estudos =====
+// dia da semana de uma data ISO: 0=domingo .. 6=sábado (UTC)
+export function diaSemana(iso) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+}
+
+// Template semanal (1 matéria/dia, intercalado). Seg-Sex: matérias; Sáb: revisão+simulado; Dom: descanso.
+export const PLANO_SEMANAL = {
+  1: { tipo: 'materia', tema: 'portugues' },
+  2: { tipo: 'materia', tema: 'matematica' },
+  3: { tipo: 'materia', tema: 'ciencias' },
+  4: { tipo: 'materia', tema: 'geografia' },
+  5: { tipo: 'materia', tema: 'historia' },
+  6: { tipo: 'revisao', simulado: true },
+  0: { tipo: 'descanso' },
+};
+
+const DIAS_ABBR = ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+
+// Plano de hoje: missão curta adaptada à fase e ao ponto fraco
+export function planoDeHoje(hojeISO, faseNome, pontoFracoTema) {
+  const wd = diaSemana(hojeISO);
+  let dia = PLANO_SEMANAL[wd];
+  // Véspera: tudo vira revisão leve, sem conteúdo novo
+  if (faseNome === 'Véspera') dia = { tipo: 'revisao', simulado: false };
+
+  if (dia.tipo === 'descanso')
+    return { tipo: 'descanso', minutos: 0, passos: ['Dia de descanso 😌 — recarregue as energias! Amanhã a gente volta.'] };
+
+  if (dia.tipo === 'revisao') {
+    const passos = ['Revisar as questões que você errou'];
+    if (dia.simulado && faseNome !== 'Aquecendo os motores') passos.push('Fazer um simulado no formato da prova');
+    else passos.push('Treino misto rápido (várias matérias)');
+    return { tipo: 'revisao', simulado: !!dia.simulado, minutos: 15, passos };
+  }
+
+  // dia de matéria
+  const foco = dia.tema;
+  const passos = ['Aquecer revisando o que você errou'];
+  passos.push(`Treinar a matéria do dia`);
+  if (pontoFracoTema && pontoFracoTema !== foco) passos.push(`Reforçar seu ponto fraco`);
+  return { tipo: 'materia', tema: foco, minutos: 15, passos };
+}
+
+// Grade da semana pra exibir (Seg→Dom)
+export function planoSemana() {
+  const ordem = [1,2,3,4,5,6,0];
+  return ordem.map(wd => ({ wd, abbr: DIAS_ABBR[wd], ...PLANO_SEMANAL[wd] }));
 }

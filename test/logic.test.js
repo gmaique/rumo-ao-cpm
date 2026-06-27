@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { srsNext, estaVencida, addDias, INTERVALOS, xpPorResposta, nivelDe, bumpStreak, semanaISO, montarFila, checarConquistas, proficienciaTema, proficienciaGlobal, diasAteProva, faseRetaFinal, DATA_PROVA } from '../src/logic.js';
+import { srsNext, estaVencida, addDias, INTERVALOS, xpPorResposta, nivelDe, bumpStreak, semanaISO, montarFila, checarConquistas, proficienciaTema, proficienciaGlobal, diasAteProva, faseRetaFinal, DATA_PROVA, diaSemana, planoDeHoje, intercalarPorTema } from '../src/logic.js';
 
 test('addDias soma dias em ISO', () => {
   assert.equal(addDias('2026-06-27', 3), '2026-06-30');
@@ -154,4 +154,24 @@ test('faseRetaFinal escolhe a fase certa', () => {
   assert.equal(faseRetaFinal('2026-11-25').fase, 'Véspera');              // 4 dias
   assert.equal(faseRetaFinal('2026-11-29').fase, 'É hoje!');              // 0
   assert.equal(faseRetaFinal('2026-06-27').metaRecomendada, 8);
+});
+
+test('diaSemana: 0=domingo .. 6=sábado', () => {
+  assert.equal(diaSemana('2026-11-29'), 0); // domingo
+  assert.equal(diaSemana('2026-11-30'), 1); // segunda
+  assert.equal(diaSemana('2026-12-05'), 6); // sábado
+});
+
+test('planoDeHoje: matéria no dia útil, descanso no domingo, revisão na véspera', () => {
+  assert.equal(planoDeHoje('2026-11-30', 'Aquecendo os motores', null).tema, 'portugues'); // segunda
+  assert.equal(planoDeHoje('2026-11-29', 'Aquecendo os motores', null).tipo, 'descanso');   // domingo
+  assert.equal(planoDeHoje('2026-11-30', 'Véspera', null).tipo, 'revisao');                  // véspera força revisão
+});
+
+test('intercalarPorTema: não repete a mesma matéria seguida quando há variedade', () => {
+  const arr = [{tema:'a'},{tema:'a'},{tema:'b'},{tema:'b'}];
+  const out = intercalarPorTema(arr);
+  let seguidas = 0;
+  for (let i=1;i<out.length;i++) if (out[i].tema===out[i-1].tema) seguidas++;
+  assert.equal(seguidas, 0);
 });

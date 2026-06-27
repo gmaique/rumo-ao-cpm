@@ -110,6 +110,7 @@ h1,h2,h3,.display{ font-family:var(--display); font-weight:700; letter-spacing:.
 .tile .ic{ width:30px; height:30px; }
 .tile b{ font-family:var(--display); font-weight:600; font-size:16px; display:block; }
 .tile small{ opacity:.9; font-size:12px; font-weight:600; }
+.tile--plano{ background:linear-gradient(150deg,#FFB04D,#FF9F1C); }
 .tile--temas{ background:linear-gradient(150deg,#3FC7FF,#1FA8E8); }
 .tile--simulado{ background:linear-gradient(150deg,#12C99B,#0BA886); }
 .tile--discursiva{ background:linear-gradient(150deg,#FF7A8E,#FF5470); }

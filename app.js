@@ -1,6 +1,6 @@
 import { carregarEstado, salvarEstado, registrarResposta, ESTADO_INICIAL } from './src/state.js';
 import { montarFila, bumpStreak, nivelDe, proficienciaGlobal, proficienciaTema, checarConquistas, NOMES_CONQUISTAS, diasAteProva, faseRetaFinal } from './src/logic.js';
-import { renderInicio, renderSessao, renderTemas, renderPerfil, renderSimulado, renderSimuladoSessao, renderSimuladoResultado, pararTimerDiscursiva } from './src/views.js';
+import { renderInicio, renderSessao, renderTemas, renderPerfil, renderSimulado, renderSimuladoSessao, renderSimuladoResultado, renderPlano, pararTimerDiscursiva } from './src/views.js';
 
 const views = [...document.querySelectorAll('.view')];
 const navBtns = [...document.querySelectorAll('.nav-btn')];
@@ -96,6 +96,14 @@ function pintar(view){
   }
   if (view==='view-simulado') return renderSimulado(document.getElementById('view-simulado'),
     { discursiva: discursivas[0], discursivas, onSimulado: iniciarSimulado, totalQuestoes: questoes.length });
+  if (view==='view-plano') return renderPlano(document.getElementById('view-plano'), {
+    hojeISO, fase: _fase.fase, pontoFraco: pontoFracoInfo(),
+    onComecar: (plano) => {
+      if (plano.tipo === 'materia') return iniciarSessaoTema(plano.tema);
+      if (plano.tipo === 'revisao' && plano.simulado) return iniciarSimulado();
+      return iniciarSessao(); // revisão/treino misto (SRS prioriza vencidas)
+    },
+  });
 }
 
 function onReset(){ estado = structuredClone(ESTADO_INICIAL); salvarEstado(localStorage, estado); pintar('view-perfil'); }
@@ -125,10 +133,18 @@ function embaralhar(arr) {
   return a;
 }
 
+// Cotas no formato real da prova do CPM (~30 questões)
+const COTA_SIMULADO = { portugues:11, matematica:10, ciencias:5, geografia:2, historia:2 };
+const SIMULADO_MIN = 35; // tempo recomendado (minutos) — vira alerta, não corta
+
 function iniciarSimulado() {
   pararCronometro();
-  const fila = embaralhar(questoes);
-  sessao = { modo:'simulado', fila, indice: 0, respostas: [], inicioMs: Date.now() };
+  const fila = embaralhar(
+    Object.entries(COTA_SIMULADO).flatMap(([tema, n]) =>
+      embaralhar(questoes.filter(q => q.tema === tema)).slice(0, n)
+    )
+  );
+  sessao = { modo:'simulado', fila, indice: 0, respostas: [], inicioMs: Date.now(), tempoMin: SIMULADO_MIN };
   showView('view-sessao');
   pintarSimuladoSessao();
 }
@@ -180,8 +196,14 @@ function pintarSessao() {
     onProxima: () => {
       sessao.indice++;
       if (sessao.indice >= sessao.fila.length) {
-        const conquistasAntes = estado.conquistas.length;
+        const streakAntes = estado.streak ?? 0;
         estado = { ...estado, ...bumpStreak(estado, hojeISO) };
+        // recorde pessoal de ofensiva (não se perde, mesmo se o streak zerar)
+        estado.recordeStreak = Math.max(estado.recordeStreak ?? 0, estado.streak, streakAntes);
+        // consolo se a ofensiva quebrou (zerou pra 1 vindo de >=3) — sem culpa
+        if (streakAntes >= 3 && estado.streak === 1) {
+          mostrarToast('🌙 A ofensiva recomeçou, mas tudo que você aprendeu ficou! Seu recorde: ' + estado.recordeStreak + ' dias 💜');
+        }
         // Checar conquistas novas após bump de streak (streak-7 surge aqui)
         const novasStreak = checarConquistas(estado).filter(c => !estado.conquistas.includes(c));
         if (novasStreak.length > 0) {
@@ -210,12 +232,14 @@ function pintarSimuladoSessao() {
     fila: sessao.fila,
     indice: sessao.indice,
     inicioMs: sessao.inicioMs,
+    tempoMin: sessao.tempoMin,
     onCronometroTick: (atualizarCronometro) => {
       pararCronometro();
       _cronometroInterval = setInterval(atualizarCronometro, 1000);
     },
-    onResponder: (q, acertou) => {
-      sessao.respostas.push({ id: q.id, tema: q.tema, dificuldade: q.dificuldade, acertou });
+    onResponder: (q, acertou, escolhida) => {
+      sessao.respostas.push({ id: q.id, tema: q.tema, dificuldade: q.dificuldade, acertou,
+        escolhida, enunciado: q.enunciado, alternativas: q.alternativas, correta: q.correta, explicacao: q.explicacao });
     },
     onProxima: () => {
       sessao.indice++;
@@ -260,6 +284,7 @@ function finalizarSimulado() {
     profGlobal,
     porTema,
     duracaoMs,
+    erros: respostas.filter(r => !r.acertou),
     onVoltar: () => { showView('view-inicio'); pintarInicio(); },
   });
 }

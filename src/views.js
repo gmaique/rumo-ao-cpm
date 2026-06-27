@@ -1,4 +1,4 @@
-import { nivelDe } from './logic.js';
+import { nivelDe, planoDeHoje, planoSemana, diaSemana } from './logic.js';
 
 const TEMAS = ['portugues','matematica','ciencias','geografia','historia'];
 const TEMA_LABELS = {
@@ -95,8 +95,8 @@ export function renderInicio(el, ctx) {
     <div class="topbar">
       ${MASCOTE}
       <div class="saud">
-        <h1>Bora estudar!</h1>
-        <p>Foco na aprovação, ${respondidasHoje ? 'de novo hoje 💪' : 'um dia de cada vez'}</p>
+        <h1>Bora aprender!</h1>
+        <p>${respondidasHoje ? 'Cada questão te deixa mais esperto 💪' : 'Um pouquinho todo dia — você consegue!'}</p>
       </div>
       <div class="nivel-badge">⭐ Nível ${nivel}</div>
     </div>
@@ -110,10 +110,10 @@ export function renderInicio(el, ctx) {
         ${freezeDisponivel ? `<span class="pill pill--freeze">🧊 freeze</span>` : ''}
       </div>
       <div class="barra barra--xp" style="margin-top:14px"><i style="width:${xpPct}%"></i></div>
-      <p class="legenda">${metaCumprida ? '✅ Meta de hoje concluída — mandou bem!' : `Faltam <b>${meta - hoje}</b> questões para a meta de hoje 🔥`}</p>
+      <p class="legenda">${metaCumprida ? '✅ Meta de hoje feita — você treinou o cérebro! Pode descansar 🌙' : `Faltam <b>${meta - hoje}</b> questões para a meta de hoje 🔥`}</p>
     </div>
 
-    <button class="btn btn-primaria" id="btn-estudar" style="margin:4px 0 16px">▶ Estudar agora</button>
+    <button class="btn ${metaCumprida ? 'btn-fantasma' : 'btn-primaria'}" id="btn-estudar" style="margin:4px 0 16px">${metaCumprida ? 'Estudar mais um pouco' : '▶ Estudar agora'}</button>
 
     ${pontoFraco ? `
     <button class="card" id="btn-ponto-fraco" style="display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:none;border-left:6px solid var(--coral);cursor:pointer;margin-bottom:16px">
@@ -126,6 +126,7 @@ export function renderInicio(el, ctx) {
     </button>` : ''}
 
     <div class="tiles">
+      <button class="tile tile--plano" data-goto="view-plano"><span class="ic">🗓️</span><span><b>Plano</b><small>o que estudar hoje</small></span></button>
       <button class="tile tile--temas" data-goto="view-temas"><span class="ic">📚</span><span><b>Matérias</b><small>treine por assunto</small></span></button>
       <button class="tile tile--simulado" data-goto="view-simulado"><span class="ic">📝</span><span><b>Simulado</b><small>modo prova</small></span></button>
       <button class="tile tile--perfil" data-goto="view-perfil"><span class="ic">📊</span><span><b>Perfil</b><small>seu progresso</small></span></button>
@@ -210,24 +211,30 @@ export function renderSimuladoSessao(el, ctx) {
   const progresso = `${indice + 1}/${total}`;
   const decorrido = formatarTempo(Date.now() - inicioMs);
 
+  const letras = ['A','B','C','D','E','F'];
+  const tempoMin = ctx.tempoMin ?? 35;
   el.innerHTML = `
+    <div class="quiz-top">
+      <div class="barra"><i style="width:${indice / total * 100}%"></i></div>
+      <span class="cron"><span id="cronometro">${decorrido}</span></span>
+    </div>
     <div class="card">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <span class="chip-tema">${q.tema}</span>
-        <span style="font-size:0.85rem;color:var(--cor-texto-sec)">${progresso}</span>
-        <span id="cronometro" style="font-size:0.85rem;font-variant-numeric:tabular-nums;color:var(--cor-texto-sec)">${decorrido}</span>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <span class="tag-tema">${labelTema(q.tema)}</span>
+        <span style="font-family:var(--display);font-weight:600;color:var(--texto-sec)">${progresso}</span>
       </div>
-      <div class="barra-progresso" style="margin:8px 0"><i style="width:${indice / total * 100}%"></i></div>
-      <p><strong>${q.enunciado}</strong></p>
-      <div id="alts-simulado">${q.alternativas.map((a, i) => `<button class="alt" data-i="${i}">${a}</button>`).join('')}</div>
-      <button class="btn btn-primaria" id="btn-prox-sim" hidden style="margin-top:12px">Próxima</button>
+      <p class="enunciado">${q.enunciado}</p>
+      <div id="alts-simulado">${q.alternativas.map((a, i) => `<button class="alt" data-i="${i}"><span class="letra">${letras[i]}</span><span>${a}</span></button>`).join('')}</div>
+      <button class="btn btn-primaria" id="btn-prox-sim" hidden style="margin-top:14px">Próxima →</button>
     </div>`;
 
-  // Inicia (ou reinicia) o cronômetro a cada questão
+  // Cronômetro: fica laranja se passar do tempo recomendado (treina ritmo)
   const elCron = el.querySelector('#cronometro');
   onCronometroTick(() => {
     if (elCron && elCron.isConnected) {
-      elCron.textContent = formatarTempo(Date.now() - inicioMs);
+      const ms = Date.now() - inicioMs;
+      elCron.textContent = formatarTempo(ms);
+      if (ms > tempoMin*60*1000) elCron.style.color = '#FFC04D';
     }
   });
 
@@ -239,39 +246,50 @@ export function renderSimuladoSessao(el, ctx) {
     alts.dataset.lock = '1';
     const escolhida = Number(btn.dataset.i);
     const acertou = escolhida === q.correta;
-    // Modo prova: sem cores de certo/errado, apenas desabilita
+    // Modo prova: sem revelar certo/errado, só marca a escolhida e segue
     [...alts.children].forEach(b => { b.disabled = true; });
-    // Marca selecionada com estilo neutro para feedback visual mínimo
-    btn.style.outline = '2px solid var(--cor-primaria)';
-    onResponder(q, acertou);
+    btn.querySelector('.letra').style.background = 'var(--grape)';
+    btn.querySelector('.letra').style.color = '#fff';
+    onResponder(q, acertou, escolhida);
     btnProx.hidden = false;
   });
 
   btnProx.addEventListener('click', onProxima);
 }
 
-// Tela de resultado do simulado
+// Tela de resultado do simulado (com gabarito comentado dos erros)
 export function renderSimuladoResultado(el, ctx) {
-  const { total, acertos, profGlobal, porTema, duracaoMs, onVoltar } = ctx;
+  const { total, acertos, porTema, duracaoMs, onVoltar, erros } = ctx;
   const pctBruto = total ? Math.round(acertos / total * 100) : 0;
+  const letras = ['A','B','C','D','E','F'];
+  const emoji = pctBruto>=70 ? '🏆' : pctBruto>=55 ? '💪' : '🌱';
+  const recado = pctBruto>=70 ? 'Mandou muito bem!' : pctBruto>=55 ? 'Tá no caminho — continua!' : 'Cada erro é um aprendizado. Bora revisar!';
+
   const temasHtml = Object.entries(porTema)
     .filter(([, p]) => p !== null)
-    .map(([t, p]) => `<div style="display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--cor-borda,#eee)">
-      <span>${t}</span><span>${p}</span>
-    </div>`).join('');
+    .map(([t, p]) => `<div class="linha"><span class="nome" style="min-width:96px">${labelTema(t)}</span>
+      <span class="barra" style="flex:1"><i style="width:${p}%"></i></span><span class="pct">${p}%</span></div>`).join('');
+
+  const errosHtml = (erros && erros.length) ? erros.map(e => `
+    <details style="margin-bottom:8px">
+      <summary style="font-weight:700;color:var(--ink)">${labelTema(e.tema)}: ${e.enunciado.slice(0,70)}${e.enunciado.length>70?'…':''}</summary>
+      <div style="margin-top:8px;font-size:14px;line-height:1.5">
+        <p style="margin-bottom:8px">${e.enunciado}</p>
+        ${e.alternativas.map((a,i)=>`<div style="padding:4px 8px;border-radius:8px;margin:3px 0;${i===e.correta?'background:#E9FBF4;color:var(--mint-deep);font-weight:700':i===e.escolhida?'background:#FFF0F3;color:var(--coral-deep)':''}">${letras[i]}) ${a} ${i===e.correta?'✓':i===e.escolhida?'✗ (você marcou)':''}</div>`).join('')}
+        <p style="margin-top:8px;color:var(--texto-sec)"><b>Por quê:</b> ${e.explicacao}</p>
+      </div>
+    </details>`).join('') : '<p style="color:var(--mint-deep);font-weight:700">🎉 Você não errou nenhuma! Incrível!</p>';
 
   el.innerHTML = `
-    <div class="card">
+    <div class="card fim">
+      <div class="selo">${emoji}</div>
       <h2>Resultado do Simulado</h2>
-      <p style="font-size:2rem;font-weight:700;margin:8px 0">${acertos}/${total} <span style="font-size:1rem;font-weight:400">(${pctBruto}% de acerto)</span></p>
-      <p>Proficiência TRI global: <strong>${profGlobal !== null ? profGlobal : '—'}</strong></p>
-      <p style="color:var(--cor-texto-sec)">Tempo total: ${formatarTempo(duracaoMs)}</p>
+      <div class="ganho">${acertos}/${total}</div>
+      <p class="resumo">${pctBruto}% de acerto · ⏱️ ${formatarTempo(duracaoMs)}<br>${recado}</p>
     </div>
-    ${temasHtml ? `<div class="card" style="margin-top:12px">
-      <h3 style="margin-bottom:8px">Proficiência por tema (ponderada por dificuldade)</h3>
-      ${temasHtml}
-    </div>` : ''}
-    <button class="btn btn-primaria" id="btn-voltar" style="margin-top:16px">Voltar ao início</button>`;
+    ${temasHtml ? `<div class="card"><div class="card-titulo">📊 Como foi por matéria</div>${temasHtml}</div>` : ''}
+    <div class="card"><div class="card-titulo">📝 O que errei (revise!)</div>${errosHtml}</div>
+    <button class="btn btn-primaria" id="btn-voltar">Voltar ao início</button>`;
 
   el.querySelector('#btn-voltar').addEventListener('click', onVoltar);
 }
@@ -337,7 +355,10 @@ export function renderPerfil(el, ctx){
       ${simuladosHtml}
     </div>
     <button class="btn" id="reset" style="margin-top:16px;background:var(--cor-erro);color:#fff">Resetar progresso</button>`;
-  el.querySelector('#reset').addEventListener('click', ()=>{ if(confirm('Apagar todo o progresso?')) ctx.onReset(); });
+  el.querySelector('#reset').addEventListener('click', ()=>{
+    const resp = prompt('Isto APAGA tudo: XP, ofensiva, conquistas e todo o histórico. Não dá pra desfazer.\n\nSe tem certeza, digite APAGAR:');
+    if (resp && resp.trim().toUpperCase() === 'APAGAR') ctx.onReset();
+  });
 }
 
 export function renderSimulado(el, ctx){
@@ -357,4 +378,49 @@ export function renderSimulado(el, ctx){
       <button class="btn btn-primaria" id="btn-simulado">▶ Começar simulado</button>
     </div>`;
   el.querySelector('#btn-simulado').addEventListener('click', () => ctx.onSimulado());
+}
+
+export function renderPlano(el, ctx) {
+  const { hojeISO, fase, pontoFraco } = ctx;
+  const plano = planoDeHoje(hojeISO, fase, pontoFraco ? pontoFraco.tema : null);
+  const wdHoje = diaSemana(hojeISO);
+
+  // título e ação do "plano de hoje"
+  let titulo, sub, botao = true;
+  if (plano.tipo === 'descanso') { titulo = '😌 Dia de descanso'; sub = 'Recarregue as energias — amanhã a gente volta!'; botao = false; }
+  else if (plano.tipo === 'revisao') { titulo = plano.simulado ? '🎯 Revisão + Simulado' : '🔁 Revisão de hoje'; sub = `~${plano.minutos} min · leve e focado`; }
+  else { titulo = `${TEMA_EMOJI[plano.tema] ?? '📘'} Hoje é dia de ${labelTema(plano.tema)}`; sub = `~${plano.minutos} min · uma matéria por dia`; }
+
+  const passosHtml = plano.passos.map((p,i) =>
+    `<div class="linha"><span style="width:26px;height:26px;border-radius:8px;background:var(--nuvem);color:var(--grape-deep);font-family:var(--display);font-weight:700;display:flex;align-items:center;justify-content:center;flex:0 0 auto">${i+1}</span><span class="nome" style="font-weight:600">${p}</span></div>`
+  ).join('');
+
+  const semana = planoSemana();
+  const semanaHtml = semana.map(d => {
+    const hoje = d.wd === wdHoje;
+    let ic = '💤', txt = 'Folga';
+    if (d.tipo === 'materia') { ic = TEMA_EMOJI[d.tema]; txt = labelTema(d.tema); }
+    else if (d.tipo === 'revisao') { ic = '🎯'; txt = 'Revisão'; }
+    return `<div class="linha" style="${hoje?'background:#EFEAFF;border-radius:12px;padding:8px 10px':''}">
+      <span class="nome" style="min-width:46px;${hoje?'color:var(--grape-deep)':''}">${d.abbr}${hoje?' •':''}</span>
+      <span style="flex:1">${ic} ${txt}</span>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <h2>Plano de estudos</h2>
+    <div class="card card--destaque">
+      <div class="card-titulo">${titulo}</div>
+      <p style="color:var(--texto-sec);font-weight:600;margin-bottom:12px">${sub}</p>
+      ${passosHtml}
+      ${botao ? `<button class="btn btn-primaria" id="btn-comecar-plano" style="margin-top:14px">▶ Começar agora</button>` : ''}
+    </div>
+    <div class="card">
+      <div class="card-titulo">🗓️ Sua semana</div>
+      ${semanaHtml}
+      <p class="legenda" style="margin-top:10px">1 matéria por dia, sábado é simulado e domingo é descanso. Leve e constante 🌱</p>
+    </div>`;
+
+  const b = el.querySelector('#btn-comecar-plano');
+  if (b) b.addEventListener('click', () => ctx.onComecar(plano));
 }
