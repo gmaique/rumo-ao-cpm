@@ -120,6 +120,7 @@ h1,h2,h3,.display{ font-family:var(--display); font-weight:700; letter-spacing:.
 .trilha{ position:relative; }
 .trilha-topo{ display:flex; align-items:baseline; gap:8px; margin-bottom:var(--g2); }
 .trilha-topo .dias{ font-family:var(--display); font-weight:700; font-size:40px; color:var(--grape-deep); line-height:1; }
+.trilha-topo .dias--calmo{ font-size:28px; color:var(--sky); }
 .trilha-topo .lbl{ font-weight:700; color:var(--texto-sec); font-size:14px; }
 .trilha-data{ font-size:13px; color:var(--texto-sec); font-weight:600; margin-bottom:var(--g3); }
 .trilha-svg{ width:100%; height:auto; display:block; }
@@ -152,6 +153,14 @@ h1,h2,h3,.display{ font-family:var(--display); font-weight:700; letter-spacing:.
 .feedback--ok{ background:#E9FBF4; color:var(--mint-deep); border:1.5px solid #BEF0E0; }
 .feedback--erro{ background:#FFF0F3; color:var(--coral-deep); border:1.5px solid #FFD3DC; }
 .feedback b{ font-family:var(--display); }
+.confianca{ margin-top:var(--g3); text-align:center; }
+.confianca>span{ font-weight:700; color:var(--texto-sec); font-size:14px; }
+.confianca-bts{ display:flex; gap:var(--g2); margin-top:8px; }
+.conf-bt{ flex:1; font:inherit; font-weight:700; cursor:pointer; padding:10px; border-radius:var(--raio);
+  border:2px solid var(--borda); background:#fff; color:var(--texto); transition:transform .08s; }
+.conf-bt:active{ transform:scale(.97); }
+.conf-bt--sel{ border-color:var(--grape); background:#EFEAFF; color:var(--grape-deep); }
+.conf-bt[disabled]{ opacity:.5; }
 
 /* tela de fim de sessão */
 .fim{ text-align:center; }

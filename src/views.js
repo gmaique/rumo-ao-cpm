@@ -79,16 +79,32 @@ export function renderInicio(el, ctx) {
   const metaCumprida = hoje >= meta;
   const xpPct = Math.min(100, xpProxNivel ? xpNoNivel / xpProxNivel * 100 : 100);
 
+  const calmo = diasProva > 60; // longe da prova: tom tranquilo, número menor
   const trilhaHtml = (diasProva !== undefined && fase) ? `
     <div class="card trilha card--destaque">
       <div class="card-titulo">🎖️ Jornada até o CPM</div>
       <div class="trilha-topo">
-        <span class="dias">${diasProva > 0 ? diasProva : '🎉'}</span>
-        <span class="lbl">${diasProva > 0 ? 'dias restantes' : 'é a sua vez!'}</span>
+        <span class="dias${calmo ? ' dias--calmo' : ''}">${diasProva > 0 ? diasProva : '🎉'}</span>
+        <span class="lbl">${diasProva > 0 ? (calmo ? 'dias — tem tempo de sobra 😉' : 'dias restantes') : 'é a sua vez!'}</span>
       </div>
       <div class="trilha-data">Admissão CPM-PR · 6º ano · 29/11/2026</div>
       ${trilhaSVG(fase)}
       <div class="trilha-fase">${fase}<small>${dica}</small></div>
+    </div>` : '';
+
+  // Guia do dia da prova — aparece só na última semana
+  const guiaProva = (diasProva !== undefined && diasProva >= 0 && diasProva <= 7) ? `
+    <div class="card" style="border-left:6px solid var(--mango)">
+      <div class="card-titulo">🎒 Guia do dia da prova</div>
+      <ul style="margin:0 0 0 18px;color:var(--texto);font-weight:600;line-height:1.9;font-size:14px">
+        <li>Leve: documento com foto (ou certidão), lápis, borracha e caneta azul</li>
+        <li>Leve água e um lanchinho 🍎</li>
+        <li>Durma cedo na véspera e tome um bom café da manhã</li>
+        <li>Leia <b>todas</b> as alternativas antes de marcar</li>
+        <li>Travou? Pula e volta depois — não perca tempo numa só</li>
+        <li>Cuidado pra marcar na linha certa do gabarito</li>
+        <li>Respira fundo: você estudou pra isso! 💪</li>
+      </ul>
     </div>` : '';
 
   el.innerHTML = `
@@ -102,6 +118,7 @@ export function renderInicio(el, ctx) {
     </div>
 
     ${trilhaHtml}
+    ${guiaProva}
 
     <div class="card">
       <div class="pills">
@@ -180,6 +197,13 @@ export function renderSessao(el, ctx) {
       <p class="enunciado">${q.enunciado}</p>
       <div id="alts">${q.alternativas.map((a, i) => `<button class="alt" data-i="${i}"><span class="letra">${letras[i]}</span><span>${a}</span></button>`).join('')}</div>
       <div id="feedback" class="feedback" hidden></div>
+      <div id="confianca" class="confianca" hidden>
+        <span>Você já sabia ou chutou?</span>
+        <div class="confianca-bts">
+          <button class="conf-bt" data-conf="sabia">😎 Já sabia</button>
+          <button class="conf-bt" data-conf="chute">🤔 Chutei</button>
+        </div>
+      </div>
       <button class="btn btn-primaria" id="btn-prox" hidden style="margin-top:14px">Próxima →</button>
     </div>`;
   const alts = el.querySelector('#alts');
@@ -197,8 +221,18 @@ export function renderSessao(el, ctx) {
     fb.hidden = false;
     fb.classList.add(acertou ? 'feedback--ok' : 'feedback--erro');
     fb.innerHTML = `<b>${acertou ? '🎉 Acertou!' : '❌ Quase!'}</b><br>${q.explicacao}`;
+    el.querySelector('#confianca').hidden = false;
     el.querySelector('#btn-prox').hidden = false;
     ctx.onResponder(q, acertou);
+    // metacognição: registra se sabia ou chutou (1 toque, opcional)
+    const confDiv = el.querySelector('#confianca');
+    confDiv.querySelectorAll('.conf-bt').forEach(cb => cb.addEventListener('click', () => {
+      if (confDiv.dataset.lock) return;
+      confDiv.dataset.lock = '1';
+      cb.classList.add('conf-bt--sel');
+      confDiv.querySelectorAll('.conf-bt').forEach(b => b.disabled = true);
+      if (typeof ctx.onConfianca === 'function') ctx.onConfianca(q, acertou, cb.dataset.conf);
+    }));
   });
   el.querySelector('#btn-prox').addEventListener('click', ctx.onProxima);
 }

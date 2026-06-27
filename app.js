@@ -193,6 +193,15 @@ function pintarSessao() {
         }
       }
     },
+    onConfianca: (q, acertou, conf) => {
+      // metacognição: guarda a confiança e corrige o agendamento
+      if (estado.respostas[q.id]) estado.respostas[q.id].confianca = conf;
+      // acertou no chute = não é domínio: traz de volta cedo (caixa 1, hoje)
+      if (acertou && conf === 'chute') {
+        estado.srs[q.id] = { caixa: 1, proximaRevisao: hojeISO };
+      }
+      salvarEstado(localStorage, estado);
+    },
     onProxima: () => {
       sessao.indice++;
       if (sessao.indice >= sessao.fila.length) {
