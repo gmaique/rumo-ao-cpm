@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { carregarEstado, salvarEstado, registrarResposta, ESTADO_INICIAL } from '../src/state.js';
 
 function fakeStorage(init) {
-  const m = new Map(init ? [['pnd_state_v1', init]] : []);
+  const m = new Map(init ? [['cpm_state_v1', init]] : []);
   return { getItem:k=>m.get(k)??null, setItem:(k,v)=>m.set(k,v) };
 }
 

@@ -53,6 +53,20 @@ function respondidasHoje() {
   return (estado.metaDia?.dia === hojeISO) ? estado.metaDia.count : 0;
 }
 
+function pontoFracoInfo() {
+  const TEMAS = ['portugues','matematica','ciencias','geografia','historia'];
+  let piorTema = null, piorPct = Infinity;
+  for (const t of TEMAS) {
+    const ids = questoes.filter(q => q.tema === t).map(q => q.id);
+    let ac = 0, tot = 0;
+    for (const id of ids) { const r = estado.respostas[id]; if (r) { ac += r.acertos; tot += r.acertos + r.erros; } }
+    if (tot < 3) continue; // precisa de histórico mínimo pra sugerir
+    const pct = ac / tot;
+    if (pct < piorPct) { piorPct = pct; piorTema = t; }
+  }
+  return piorTema ? { tema: piorTema, pct: Math.round(piorPct * 100) } : null;
+}
+
 function pintarInicio() {
   renderInicio(elInicio, {
     estado,
@@ -63,6 +77,8 @@ function pintarInicio() {
     fase: _fase.fase,
     emoji: _fase.emoji,
     dica: _fase.dica,
+    pontoFraco: pontoFracoInfo(),
+    onTreinarFraco: () => { const pf = pontoFracoInfo(); if (pf) iniciarSessaoTema(pf.tema); },
   });
 }
 

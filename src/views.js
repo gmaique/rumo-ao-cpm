@@ -72,7 +72,7 @@ function trilhaSVG(faseAtual) {
 }
 
 export function renderInicio(el, ctx) {
-  const { estado, meta, respondidasHoje, diasProva, fase, dica } = ctx;
+  const { estado, meta, respondidasHoje, diasProva, fase, dica, pontoFraco } = ctx;
   const hoje = respondidasHoje ?? 0;
   const { nivel, xpNoNivel, xpProxNivel } = nivelDe(estado.xp);
   const freezeDisponivel = (estado.freezesUsadosSemana ?? 0) < 1;
@@ -113,7 +113,17 @@ export function renderInicio(el, ctx) {
       <p class="legenda">${metaCumprida ? '✅ Meta de hoje concluída — mandou bem!' : `Faltam <b>${meta - hoje}</b> questões para a meta de hoje 🔥`}</p>
     </div>
 
-    <button class="btn btn-primaria" id="btn-estudar" style="margin:4px 0 20px">▶ Estudar agora</button>
+    <button class="btn btn-primaria" id="btn-estudar" style="margin:4px 0 16px">▶ Estudar agora</button>
+
+    ${pontoFraco ? `
+    <button class="card" id="btn-ponto-fraco" style="display:flex;align-items:center;gap:12px;width:100%;text-align:left;border:none;border-left:6px solid var(--coral);cursor:pointer;margin-bottom:16px">
+      <span style="font-size:30px">${TEMA_EMOJI[pontoFraco.tema] ?? '🎯'}</span>
+      <span style="flex:1">
+        <b style="font-family:var(--display);color:var(--ink);font-size:16px">Foco de hoje: ${labelTema(pontoFraco.tema)}</b>
+        <small style="display:block;color:var(--texto-sec);font-weight:600;margin-top:2px">É onde você mais erra (${pontoFraco.pct}% de acerto). Bora reforçar! 💪</small>
+      </span>
+      <span style="color:var(--coral);font-weight:800;font-size:18px">▶</span>
+    </button>` : ''}
 
     <div class="tiles">
       <button class="tile tile--temas" data-goto="view-temas"><span class="ic">📚</span><span><b>Matérias</b><small>treine por assunto</small></span></button>
@@ -122,6 +132,8 @@ export function renderInicio(el, ctx) {
     </div>
   `;
   el.querySelector('#btn-estudar').addEventListener('click', ctx.onIniciarSessao);
+  const elFraco = el.querySelector('#btn-ponto-fraco');
+  if (elFraco && typeof ctx.onTreinarFraco === 'function') elFraco.addEventListener('click', ctx.onTreinarFraco);
   // tiles reaproveitam a navegação inferior existente
   el.querySelectorAll('[data-goto]').forEach(t => t.addEventListener('click', () => {
     const nav = document.querySelector(`.nav-btn[data-view="${t.dataset.goto}"]`);

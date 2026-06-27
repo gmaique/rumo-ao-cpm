@@ -5,7 +5,7 @@ if (!globalThis.structuredClone) {
   globalThis.structuredClone = (obj) => JSON.parse(JSON.stringify(obj));
 }
 
-const CHAVE = 'pnd_state_v1';
+const CHAVE = 'cpm_state_v1';
 
 export const ESTADO_INICIAL = {
   versao: 1, xp: 0, streak: 0, ultimoDia: null, freezesUsadosSemana: 0, semanaFreeze: null,
