@@ -1,0 +1,5 @@
+.superpowers/
+data/provas-oficiais/
+data/extra/
+node_modules/
+.DS_Store

@@ -1,0 +1,1532 @@
+[
+  {
+    "id": "cie-01",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é o órgão responsável por bombear o sangue para todo o corpo humano?",
+    "alternativas": [
+      "A) Pulmão",
+      "B) Rim",
+      "C) Coração",
+      "D) Fígado"
+    ],
+    "correta": 2,
+    "explicacao": "O coração é o órgão central do sistema circulatório. Ele funciona como uma bomba que empurra o sangue por todos os vasos sanguíneos do corpo. Sem o coração, o sangue não chegaria aos órgãos.",
+    "dificuldade": 1
+  },
+  {
+    "id": "cie-02",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "No sistema digestório, onde ocorre a maior parte da absorção dos nutrientes dos alimentos?",
+    "alternativas": [
+      "A) No estômago",
+      "B) No intestino delgado",
+      "C) No esôfago",
+      "D) No intestino grosso"
+    ],
+    "correta": 1,
+    "explicacao": "O intestino delgado é o principal local onde os nutrientes dos alimentos são absorvidos e passam para o sangue. Ele é muito comprido e tem pequenas dobras internas que aumentam a absorção.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-03",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual órgão do sistema respiratório é responsável pela troca de gases entre o ar e o sangue?",
+    "alternativas": [
+      "A) Traqueia",
+      "B) Faringe",
+      "C) Brônquios",
+      "D) Pulmões"
+    ],
+    "correta": 3,
+    "explicacao": "Os pulmões são os órgãos onde o oxigênio do ar passa para o sangue e o gás carbônico do sangue é liberado para fora do corpo. Essa troca acontece em pequenas estruturas chamadas alvéolos pulmonares.",
+    "dificuldade": 1
+  },
+  {
+    "id": "cie-04",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual dos sentidos humanos permite identificar sabores doce, salgado, azedo e amargo?",
+    "alternativas": [
+      "A) Olfato",
+      "B) Tato",
+      "C) Paladar",
+      "D) Audição"
+    ],
+    "correta": 2,
+    "explicacao": "O paladar é o sentido responsável por identificar os sabores. Ele funciona por meio das papilas gustativas que ficam na língua. O olfato também ajuda a sentir o sabor dos alimentos.",
+    "dificuldade": 1
+  },
+  {
+    "id": "cie-05",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma alimentação saudável deve ser variada e equilibrada. Qual grupo de alimentos é a principal fonte de energia para o corpo humano?",
+    "alternativas": [
+      "A) Proteínas (carnes e ovos)",
+      "B) Carboidratos (arroz, pão, macarrão)",
+      "C) Vitaminas (frutas e verduras)",
+      "D) Gorduras (óleos e manteiga)"
+    ],
+    "correta": 1,
+    "explicacao": "Os carboidratos são o principal combustível do corpo humano. Alimentos como arroz, pão e macarrão fornecem energia para que possamos realizar nossas atividades diárias.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-06",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "As plantas realizam fotossíntese para produzir seu próprio alimento. Quais são os ingredientes principais que a planta usa nesse processo?",
+    "alternativas": [
+      "A) Água e oxigênio",
+      "B) Gás carbônico e luz solar",
+      "C) Água, gás carbônico e luz solar",
+      "D) Solo e minerais apenas"
+    ],
+    "correta": 2,
+    "explicacao": "Na fotossíntese, a planta usa água absorvida pelas raízes, gás carbônico do ar e energia da luz solar para produzir seu alimento (glicose). Como resultado, ela libera oxigênio para o ar.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-07",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é a parte da planta responsável por absorver água e sais minerais do solo?",
+    "alternativas": [
+      "A) Folha",
+      "B) Caule",
+      "C) Flor",
+      "D) Raiz"
+    ],
+    "correta": 3,
+    "explicacao": "A raiz fica enterrada no solo e tem a função de absorver água e sais minerais. Ela também serve para fixar a planta no chão, impedindo que ela caia.",
+    "dificuldade": 1
+  },
+  {
+    "id": "cie-08",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Os animais vertebrados são divididos em grupos. A qual grupo pertencem os animais que têm penas, bico e asas?",
+    "alternativas": [
+      "A) Mamíferos",
+      "B) Répteis",
+      "C) Aves",
+      "D) Anfíbios"
+    ],
+    "correta": 2,
+    "explicacao": "As aves são animais vertebrados que possuem penas cobrindo o corpo, bico e asas. A maioria consegue voar, mas existem aves que não voam, como o pinguim e o avestruz.",
+    "dificuldade": 1
+  },
+  {
+    "id": "cie-09",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Numa cadeia alimentar de um lago: algas → peixinho → garça. O que as algas representam nessa cadeia?",
+    "alternativas": [
+      "A) Consumidor primário",
+      "B) Consumidor secundário",
+      "C) Decompositor",
+      "D) Produtor"
+    ],
+    "correta": 3,
+    "explicacao": "As algas são produtores porque fabricam seu próprio alimento pela fotossíntese. Os produtores estão sempre no início da cadeia alimentar. O peixinho é consumidor primário e a garça é consumidora secundária.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-10",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O ciclo da água envolve diferentes processos. Quando o sol aquece a água dos rios e oceanos e ela vira vapor, esse processo se chama:",
+    "alternativas": [
+      "A) Condensação",
+      "B) Precipitação",
+      "C) Evaporação",
+      "D) Infiltração"
+    ],
+    "correta": 2,
+    "explicacao": "A evaporação é o processo em que a água líquida se transforma em vapor de água por causa do calor do sol. O vapor sobe para a atmosfera, esfria e se transforma em nuvens.",
+    "dificuldade": 1
+  },
+  {
+    "id": "cie-11",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Em qual dos estados físicos as moléculas da água estão mais próximas e presas umas às outras, dando forma fixa ao material?",
+    "alternativas": [
+      "A) Estado gasoso",
+      "B) Estado líquido",
+      "C) Estado sólido",
+      "D) Estado de plasma"
+    ],
+    "correta": 2,
+    "explicacao": "No estado sólido (como o gelo), as partículas da água ficam muito próximas e unidas em posições fixas, por isso o gelo tem forma definida. No estado líquido e gasoso, as partículas se movem mais livremente.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-12",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Ao misturar água e areia num copo e deixar descansar, a areia afunda e pode ser separada. Essa mistura é chamada de:",
+    "alternativas": [
+      "A) Mistura homogênea",
+      "B) Solução",
+      "C) Mistura heterogênea",
+      "D) Substância pura"
+    ],
+    "correta": 2,
+    "explicacao": "A mistura de água e areia é heterogênea porque podemos ver claramente as duas partes separadas. Ao contrário, quando dissolvemos sal na água, não conseguimos ver o sal separado — essa sim é uma mistura homogênea.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-13",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O dia e a noite acontecem porque:",
+    "alternativas": [
+      "A) A Lua bloqueia a luz do Sol à noite",
+      "B) A Terra gira ao redor de si mesma (rotação)",
+      "C) A Terra se aproxima e se afasta do Sol",
+      "D) O Sol gira ao redor da Terra"
+    ],
+    "correta": 1,
+    "explicacao": "A Terra gira em torno do próprio eixo, fazendo um giro completo a cada 24 horas. A parte voltada para o Sol recebe luz (dia) e a parte de costas para o Sol fica no escuro (noite).",
+    "dificuldade": 1
+  },
+  {
+    "id": "cie-14",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "As estações do ano (verão, outono, inverno e primavera) são causadas por:",
+    "alternativas": [
+      "A) A variação da distância entre a Terra e o Sol ao longo do ano",
+      "B) A inclinação do eixo da Terra durante sua volta ao redor do Sol",
+      "C) As fases da Lua que mudam a temperatura",
+      "D) A rotação da Terra em torno de si mesma"
+    ],
+    "correta": 1,
+    "explicacao": "O eixo da Terra é levemente inclinado. Durante a translação (volta ao redor do Sol), essa inclinação faz com que cada hemisfério receba mais ou menos luz solar em épocas diferentes, criando as estações do ano.",
+    "dificuldade": 3
+  },
+  {
+    "id": "cie-15",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é a ordem correta dos planetas do Sistema Solar, do mais próximo ao mais distante do Sol?",
+    "alternativas": [
+      "A) Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano, Netuno",
+      "B) Terra, Marte, Vênus, Mercúrio, Júpiter, Saturno, Urano, Netuno",
+      "C) Mercúrio, Terra, Vênus, Marte, Saturno, Júpiter, Urano, Netuno",
+      "D) Vênus, Mercúrio, Terra, Marte, Júpiter, Saturno, Netuno, Urano"
+    ],
+    "correta": 0,
+    "explicacao": "A ordem correta dos 8 planetas partindo do Sol é: Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno. Um jeito de lembrar é usar as iniciais: 'Me Vejo Tendo Muita Jornada Sem Usar Nada'.",
+    "dificuldade": 3
+  },
+  {
+    "id": "cie-16",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O lixo produzido nas cidades pode ser separado para reciclagem. Qual cor de lixeira deve receber papéis e papelão?",
+    "alternativas": [
+      "A) Vermelha",
+      "B) Verde",
+      "C) Azul",
+      "D) Amarela"
+    ],
+    "correta": 2,
+    "explicacao": "Pela coleta seletiva brasileira, a lixeira azul é destinada a papéis e papelão. A vermelha recebe plástico, a verde recebe vidro e a amarela recebe metais. Separar o lixo ajuda a reciclar e preservar o meio ambiente.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-17",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Os anfíbios, como os sapos e as rãs, têm uma característica especial sobre sua reprodução e desenvolvimento. Qual é ela?",
+    "alternativas": [
+      "A) Nascem diretamente no formato adulto, sem transformação",
+      "B) Passam por metamorfose: começam como girinos aquáticos e se tornam adultos terrestres",
+      "C) São animais que só vivem na água durante toda a vida",
+      "D) São animais de sangue quente e têm pelos"
+    ],
+    "correta": 1,
+    "explicacao": "Os anfíbios passam por metamorfose: o ovo vira um girino (larva aquática com cauda e brânquias) que, aos poucos, desenvolve patas, perde a cauda e se transforma no sapo adulto que pode viver em terra e na água.",
+    "dificuldade": 2
+  },
+  {
+    "id": "cie-18",
+    "tema": "ciencias",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Os decompositores têm um papel fundamental na natureza. O que eles fazem?",
+    "alternativas": [
+      "A) Produzem alimento pela fotossíntese",
+      "B) Caçam e comem outros animais",
+      "C) Decompõem restos de animais e plantas, devolvendo nutrientes ao solo",
+      "D) Transformam gás carbônico em oxigênio"
+    ],
+    "correta": 2,
+    "explicacao": "Os decompositores, como fungos e bactérias, quebram restos de animais e plantas mortos em partes menores. Isso devolve nutrientes ao solo, que serão usados pelas plantas para crescer. Eles são essenciais para reciclar a matéria na natureza.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-01",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é a capital do estado do Paraná?",
+    "alternativas": [
+      "A) Londrina",
+      "B) Maringá",
+      "C) Curitiba",
+      "D) Foz do Iguaçu"
+    ],
+    "correta": 2,
+    "explicacao": "Curitiba é a capital e maior cidade do Paraná. As outras cidades citadas são importantes no estado, mas não são a capital.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-02",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Em qual região do Brasil o estado do Paraná está localizado?",
+    "alternativas": [
+      "A) Região Sudeste",
+      "B) Região Sul",
+      "C) Região Centro-Oeste",
+      "D) Região Nordeste"
+    ],
+    "correta": 1,
+    "explicacao": "O Paraná faz parte da Região Sul do Brasil, junto com Santa Catarina e Rio Grande do Sul. Essa região é conhecida pelo clima mais frio.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-03",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Quais estados brasileiros fazem fronteira com o Paraná ao norte e ao sul, respectivamente?",
+    "alternativas": [
+      "A) Minas Gerais e Rio Grande do Sul",
+      "B) São Paulo e Santa Catarina",
+      "C) Mato Grosso do Sul e Santa Catarina",
+      "D) São Paulo e Rio Grande do Sul"
+    ],
+    "correta": 1,
+    "explicacao": "O Paraná faz fronteira com São Paulo ao norte e com Santa Catarina ao sul. Também faz fronteira com Mato Grosso do Sul a noroeste, e com Argentina e Paraguai.",
+    "dificuldade": 2
+  },
+  {
+    "id": "geo-04",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Curitiba é conhecida por ter muitos parques e áreas verdes. Isso faz dela uma cidade referência em:",
+    "alternativas": [
+      "A) Turismo de praia",
+      "B) Qualidade de vida e planejamento urbano",
+      "C) Mineração de ouro",
+      "D) Pesca artesanal"
+    ],
+    "correta": 1,
+    "explicacao": "Curitiba é famosa por seu planejamento urbano moderno, com muitos parques, áreas verdes e um eficiente sistema de transporte público, sendo modelo de qualidade de vida.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-05",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O clima de Curitiba é caracterizado por:",
+    "alternativas": [
+      "A) Calor intenso durante todo o ano, sem inverno frio",
+      "B) Chuvas escassas e secas prolongadas",
+      "C) Invernos frios com possibilidade de geada e verões amenos",
+      "D) Temperatura constante de 30°C em todos os meses"
+    ],
+    "correta": 2,
+    "explicacao": "Curitiba tem clima subtropical, com invernos frios e geadas frequentes. É uma das capitais brasileiras com as temperaturas mais baixas no inverno.",
+    "dificuldade": 2
+  },
+  {
+    "id": "geo-06",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Em um mapa, a legenda serve para:",
+    "alternativas": [
+      "A) Indicar onde fica o norte geográfico",
+      "B) Mostrar a distância real representada no mapa",
+      "C) Explicar o significado dos símbolos e cores usados no mapa",
+      "D) Indicar o nome do cartógrafo que fez o mapa"
+    ],
+    "correta": 2,
+    "explicacao": "A legenda explica o significado de cada símbolo, cor ou sinal usado no mapa. Sem a legenda, não conseguimos entender o que o mapa está representando.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-07",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Na rosa dos ventos, os pontos colaterais são:",
+    "alternativas": [
+      "A) Norte, Sul, Leste e Oeste",
+      "B) Nordeste, Noroeste, Sudeste e Sudoeste",
+      "C) Norte, Nordeste, Leste e Sudeste",
+      "D) Sul, Sudoeste, Oeste e Noroeste"
+    ],
+    "correta": 1,
+    "explicacao": "Os pontos cardeais são Norte, Sul, Leste (ou Este) e Oeste. Os pontos colaterais ficam entre eles: Nordeste, Noroeste, Sudeste e Sudoeste.",
+    "dificuldade": 2
+  },
+  {
+    "id": "geo-08",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O Brasil é dividido em quantas regiões geográficas?",
+    "alternativas": [
+      "A) Três",
+      "B) Quatro",
+      "C) Cinco",
+      "D) Seis"
+    ],
+    "correta": 2,
+    "explicacao": "O Brasil é dividido em cinco regiões: Norte, Nordeste, Centro-Oeste, Sudeste e Sul. Cada região tem características naturais, culturais e econômicas próprias.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-09",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Brasília é a capital do Brasil. Em qual região ela está localizada?",
+    "alternativas": [
+      "A) Região Sudeste",
+      "B) Região Norte",
+      "C) Região Centro-Oeste",
+      "D) Região Nordeste"
+    ],
+    "correta": 2,
+    "explicacao": "Brasília, a capital federal do Brasil, está localizada na Região Centro-Oeste, no Distrito Federal. Foi construída especialmente para ser a capital do país.",
+    "dificuldade": 2
+  },
+  {
+    "id": "geo-10",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma área com muitas casas, prédios, comércio, escolas e hospitais é chamada de:",
+    "alternativas": [
+      "A) Zona rural",
+      "B) Zona urbana",
+      "C) Área de preservação",
+      "D) Zona agrícola"
+    ],
+    "correta": 1,
+    "explicacao": "A zona urbana é a área da cidade, onde há grande concentração de construções e serviços. A zona rural é o campo, onde predominam as atividades agrícolas e pecuárias.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-11",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual das formas de relevo a seguir é caracterizada por ser uma área elevada, com topo plano ou levemente ondulado?",
+    "alternativas": [
+      "A) Planície",
+      "B) Depressão",
+      "C) Planalto",
+      "D) Serra"
+    ],
+    "correta": 2,
+    "explicacao": "O planalto é uma área elevada com superfície plana ou suavemente ondulada. A planície é uma área baixa e plana, e a montanha tem elevação mais acentuada com picos altos.",
+    "dificuldade": 2
+  },
+  {
+    "id": "geo-12",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O rio Iguaçu, famoso pelas Cataratas do Iguaçu, pertence ao estado do:",
+    "alternativas": [
+      "A) São Paulo",
+      "B) Santa Catarina",
+      "C) Paraná",
+      "D) Mato Grosso do Sul"
+    ],
+    "correta": 2,
+    "explicacao": "As Cataratas do Iguaçu ficam em Foz do Iguaçu, cidade do Paraná, na fronteira com a Argentina. O Rio Iguaçu nasce em Curitiba e é um dos principais rios do estado.",
+    "dificuldade": 2
+  },
+  {
+    "id": "geo-13",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma paisagem modificada pelo ser humano é aquela que:",
+    "alternativas": [
+      "A) Nunca foi tocada pelas pessoas e está em estado natural",
+      "B) Foi transformada pela ação humana, como cidades e plantações",
+      "C) Existe apenas em florestas tropicais virgens",
+      "D) É formada apenas por rios e lagos naturais"
+    ],
+    "correta": 1,
+    "explicacao": "A paisagem modificada (ou humanizada) é aquela que o ser humano transformou, como áreas com cidades, estradas, represas e lavouras. A paisagem natural existe sem intervenção humana.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-14",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Curitiba é pioneira no Brasil no uso de qual sistema de transporte público urbano?",
+    "alternativas": [
+      "A) Metrô subterrâneo com múltiplas linhas",
+      "B) Bondes elétricos em toda a cidade",
+      "C) Ônibus biarticulados com estações-tubo",
+      "D) Teleférico interligando os bairros"
+    ],
+    "correta": 2,
+    "explicacao": "Curitiba ficou famosa mundialmente pelo seu sistema de ônibus biarticulados (muito longos) com estações-tubo, que funcionam como estações de metrô, mas na superfície.",
+    "dificuldade": 2
+  },
+  {
+    "id": "geo-15",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "No trânsito, respeitar semáforos, faixas de pedestre e limites de velocidade é um exemplo de:",
+    "alternativas": [
+      "A) Atitude antissocial que prejudica o trânsito",
+      "B) Exercício de cidadania e respeito às leis de trânsito",
+      "C) Obrigação apenas dos motoristas de caminhão",
+      "D) Regra válida somente em rodovias"
+    ],
+    "correta": 1,
+    "explicacao": "Respeitar as regras de trânsito é um dever de todos — pedestres, ciclistas e motoristas. É um ato de cidadania que garante a segurança e o bom convívio nas cidades.",
+    "dificuldade": 1
+  },
+  {
+    "id": "geo-16",
+    "tema": "geografia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual dos meios de comunicação a seguir permite enviar uma mensagem instantaneamente para alguém que está em outro país?",
+    "alternativas": [
+      "A) Carta enviada pelo correio",
+      "B) Telegrama físico",
+      "C) Internet e aplicativos de mensagem",
+      "D) Jornal impresso"
+    ],
+    "correta": 2,
+    "explicacao": "A internet, por meio de aplicativos de mensagens e e-mails, permite comunicação instantânea com qualquer lugar do mundo. Cartas e jornais impressos levam dias para chegar.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-01",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Quando falamos que algo aconteceu no 'passado', queremos dizer que esse evento:",
+    "alternativas": [
+      "A) ainda vai acontecer",
+      "B) está acontecendo agora",
+      "C) já aconteceu antes do momento atual",
+      "D) nunca aconteceu de verdade"
+    ],
+    "correta": 2,
+    "explicacao": "O passado é tudo aquilo que já aconteceu antes do momento em que vivemos. O presente é o agora, e o futuro é o que ainda vai acontecer.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-02",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Um século equivale a quantos anos?",
+    "alternativas": [
+      "A) 10 anos",
+      "B) 50 anos",
+      "C) 100 anos",
+      "D) 1000 anos"
+    ],
+    "correta": 2,
+    "explicacao": "Um século tem 100 anos. Uma década tem 10 anos. Um milênio tem 1.000 anos. Saber isso ajuda a situar os eventos históricos na linha do tempo.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-03",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Documentos escritos, fotografias, ferramentas antigas e relatos orais são exemplos de:",
+    "alternativas": [
+      "A) lendas populares",
+      "B) fontes históricas",
+      "C) ficção científica",
+      "D) previsões do futuro"
+    ],
+    "correta": 1,
+    "explicacao": "Fontes históricas são tudo aquilo que nos ajuda a conhecer o passado: documentos, objetos, fotografias, músicas, monumentos e depoimentos de pessoas. Os historiadores estudam essas fontes para reconstruir a história.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-04",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Antes da chegada dos portugueses, o Brasil já era habitado por muitos povos. Esses povos são chamados de:",
+    "alternativas": [
+      "A) colonizadores",
+      "B) imigrantes",
+      "C) povos indígenas",
+      "D) escravizados"
+    ],
+    "correta": 2,
+    "explicacao": "Os povos indígenas (ou povos originários) já viviam no Brasil há milhares de anos antes da chegada dos europeus. Eram centenas de povos diferentes, com línguas, culturas e modos de vida próprios.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-05",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Os povos indígenas contribuíram muito para a cultura brasileira. Qual das alternativas é um exemplo dessa contribuição?",
+    "alternativas": [
+      "A) O uso do garfo e da faca na alimentação",
+      "B) Palavras do português como 'abacaxi', 'mandioca' e 'pipoca'",
+      "C) A festa do carnaval trazida da Europa",
+      "D) O futebol criado no Brasil"
+    ],
+    "correta": 1,
+    "explicacao": "Muitas palavras do português brasileiro vêm das línguas indígenas, como 'abacaxi', 'mandioca', 'pipoca', 'caju' e 'tatu'. Os indígenas também ensinaram técnicas de cultivo, remédios e conhecimentos sobre a natureza.",
+    "dificuldade": 2
+  },
+  {
+    "id": "his-06",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Em que ano os portugueses chegaram ao Brasil?",
+    "alternativas": [
+      "A) 1492",
+      "B) 1500",
+      "C) 1822",
+      "D) 1889"
+    ],
+    "correta": 1,
+    "explicacao": "A frota de Pedro Álvares Cabral chegou ao Brasil em 22 de abril de 1500. Em 1492, Cristóvão Colombo chegou à América, mas não ao Brasil. 1822 é a Independência do Brasil e 1889 é a Proclamação da República.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-07",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Durante a colonização do Brasil, muitas pessoas africanas foram arrancadas de seus países e trazidas à força para trabalhar. Isso é chamado de:",
+    "alternativas": [
+      "A) imigração voluntária",
+      "B) escravidão",
+      "C) colonização pacífica",
+      "D) turismo histórico"
+    ],
+    "correta": 1,
+    "explicacao": "A escravidão foi um sistema cruel em que pessoas africanas eram sequestradas e obrigadas a trabalhar sem salário nem liberdade. Essa prática durou séculos no Brasil e deixou marcas profundas na nossa história e cultura.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-08",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "A Lei Áurea, que aboliu (acabou com) a escravidão no Brasil, foi assinada em:",
+    "alternativas": [
+      "A) 7 de setembro de 1822",
+      "B) 15 de novembro de 1889",
+      "C) 13 de maio de 1888",
+      "D) 19 de dezembro de 1853"
+    ],
+    "correta": 2,
+    "explicacao": "A Lei Áurea foi assinada pela Princesa Isabel em 13 de maio de 1888, encerrando oficialmente a escravidão no Brasil. O Brasil foi um dos últimos países do mundo a abolir essa prática desumana.",
+    "dificuldade": 2
+  },
+  {
+    "id": "his-09",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O Dia da Independência do Brasil é comemorado em:",
+    "alternativas": [
+      "A) 13 de maio",
+      "B) 7 de setembro",
+      "C) 15 de novembro",
+      "D) 19 de dezembro"
+    ],
+    "correta": 1,
+    "explicacao": "Em 7 de setembro de 1822, Dom Pedro I proclamou a Independência do Brasil às margens do Rio Ipiranga, em São Paulo. Essa data ficou conhecida como o 'Grito do Ipiranga' e é feriado nacional até hoje.",
+    "dificuldade": 1
+  },
+  {
+    "id": "his-10",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "A Proclamação da República no Brasil aconteceu em 15 de novembro de 1889. Quem liderou esse evento?",
+    "alternativas": [
+      "A) Dom Pedro I",
+      "B) Princesa Isabel",
+      "C) Marechal Deodoro da Fonseca",
+      "D) Tiradentes"
+    ],
+    "correta": 2,
+    "explicacao": "O Marechal Deodoro da Fonseca liderou o movimento que proclamou a República em 15 de novembro de 1889, encerrando o período do Império. Ele se tornou o primeiro presidente do Brasil.",
+    "dificuldade": 2
+  },
+  {
+    "id": "his-11",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "O Paraná se tornou uma Província separada do São Paulo em que ano, conquistando sua emancipação?",
+    "alternativas": [
+      "A) 1500",
+      "B) 1822",
+      "C) 1853",
+      "D) 1889"
+    ],
+    "correta": 2,
+    "explicacao": "O Paraná foi emancipado (separado da Província de São Paulo) em 19 de dezembro de 1853, durante o Império do Brasil. Essa data é comemorada como o Dia do Paraná.",
+    "dificuldade": 2
+  },
+  {
+    "id": "his-12",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Curitiba é a capital do Paraná. No início, a cidade cresceu com a atividade econômica ligada principalmente a:",
+    "alternativas": [
+      "A) pesca e marinha mercante",
+      "B) mineração de ouro e pedras preciosas",
+      "C) erva-mate e tropeirismo (pecuária de gado)",
+      "D) produção de automóveis"
+    ],
+    "correta": 2,
+    "explicacao": "Curitiba e o Paraná se desenvolveram muito por causa da erva-mate e do tropeirismo — o transporte de gado pelos Campos Gerais. Mais tarde, a madeira e o café também foram importantes para a economia paranaense.",
+    "dificuldade": 2
+  },
+  {
+    "id": "his-13",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Curitiba e o Paraná receberam muitos imigrantes europeus no final do século XIX e início do século XX. Qual dos grupos abaixo NÃO é tradicionalmente associado à imigração paranaense?",
+    "alternativas": [
+      "A) Poloneses",
+      "B) Ucranianos",
+      "C) Italianos",
+      "D) Japoneses do Hokkaido (Polo Norte)"
+    ],
+    "correta": 3,
+    "explicacao": "O Paraná recebeu muitos poloneses, ucranianos, italianos e alemães. Os poloneses, por exemplo, fundaram bairros em Curitiba como o Água Verde e o Santa Cândida. 'Japoneses do Polo Norte' não é um grupo real de imigrantes.",
+    "dificuldade": 2
+  },
+  {
+    "id": "his-14",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "A imigração ucraniana deixou marcas visíveis no Paraná. Uma dessas marcas são as igrejas com cúpulas coloridas chamadas:",
+    "alternativas": [
+      "A) mesquitas",
+      "B) catedrais góticas",
+      "C) igrejas ortodoxas com cúpulas estilo bizantino",
+      "D) templos xintoístas"
+    ],
+    "correta": 2,
+    "explicacao": "Os imigrantes ucranianos trouxeram sua tradição religiosa e construíram igrejas ortodoxas com cúpulas coloridas no estilo bizantino. Essas igrejas são símbolo da presença ucraniana no Paraná e podem ser vistas em várias cidades da região.",
+    "dificuldade": 3
+  },
+  {
+    "id": "his-15",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "A bandeira do Brasil tem um fundo verde com um losango amarelo e uma esfera azul. As estrelas na esfera azul representam:",
+    "alternativas": [
+      "A) os países da América do Sul",
+      "B) os estados brasileiros e o Distrito Federal",
+      "C) os séculos de história do Brasil",
+      "D) as etnias que formaram o povo brasileiro"
+    ],
+    "correta": 1,
+    "explicacao": "Cada estrela na bandeira do Brasil representa um estado da federação ou o Distrito Federal. A faixa branca traz o lema 'Ordem e Progresso', inspirado no positivismo. O verde representa as matas e o amarelo, as riquezas minerais.",
+    "dificuldade": 2
+  },
+  {
+    "id": "his-16",
+    "tema": "historia",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Cidadania significa ter direitos e também deveres. Qual das alternativas é um DEVER do cidadão brasileiro?",
+    "alternativas": [
+      "A) Receber serviços de saúde e educação",
+      "B) Votar nas eleições (quando adulto) e respeitar as leis",
+      "C) Ter liberdade de expressão",
+      "D) Ser tratado com igualdade perante a lei"
+    ],
+    "correta": 1,
+    "explicacao": "Votar (quando adulto) e respeitar as leis são exemplos de deveres do cidadão. Já receber saúde, educação, liberdade de expressão e igualdade perante a lei são direitos garantidos pela Constituição brasileira.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-01",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma loja tinha 1.245 caixas de suco. Durante o dia, vendeu 387 caixas. Quantas caixas de suco sobraram?",
+    "alternativas": [
+      "858",
+      "932",
+      "868",
+      "958"
+    ],
+    "correta": 0,
+    "explicacao": "Fazemos a subtração: 1.245 − 387. Primeiro subtraímos as unidades (5 − 7 não dá, então emprestamos: 15 − 7 = 8), depois as dezenas (3 − 1 − 8 não dá, emprestamos: 13 − 1 − 8 = 4... relance: 1.245 − 387 = 858). Sobraram 858 caixas.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-02",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma caixa de laranja tem 24 laranjas. Quantas laranjas há em 15 caixas iguais?",
+    "alternativas": [
+      "340",
+      "360",
+      "380",
+      "300"
+    ],
+    "correta": 1,
+    "explicacao": "Multiplicamos 24 × 15. Podemos fazer 24 × 10 = 240 e 24 × 5 = 120. Somando: 240 + 120 = 360. Há 360 laranjas no total.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-03",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma professora distribuiu 648 figurinhas igualmente entre 8 crianças. Quantas figurinhas cada criança recebeu?",
+    "alternativas": [
+      "71",
+      "91",
+      "81",
+      "84"
+    ],
+    "correta": 2,
+    "explicacao": "Dividimos 648 ÷ 8. Sabemos que 8 × 80 = 640 e 8 × 1 = 8, então 8 × 81 = 648. Cada criança recebeu 81 figurinhas.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-04",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Pedro foi ao mercado e comprou produtos no valor de R$ 34,75. Ele pagou com uma nota de R$ 50,00. Qual foi o troco que recebeu?",
+    "alternativas": [
+      "R$ 15,25",
+      "R$ 15,75",
+      "R$ 16,25",
+      "R$ 14,75"
+    ],
+    "correta": 0,
+    "explicacao": "Fazemos 50,00 − 34,75. Subtraímos os centavos: 100 − 75 = 25 centavos (pegamos emprestado 1 real). Subtraímos os reais: 49 − 34 = 15. O troco é R$ 15,25.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-05",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma pizza foi cortada em 8 pedaços iguais. João comeu 3 pedaços. Que fração da pizza João comeu?",
+    "alternativas": [
+      "5/8",
+      "3/4",
+      "3/8",
+      "1/3"
+    ],
+    "correta": 2,
+    "explicacao": "João comeu 3 pedaços de um total de 8. A fração é 3/8 (três oitavos). Os outros 5 pedaços restaram, que seria 5/8.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-06",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Em uma turma de 40 alunos, 3/4 foram aprovados no final do ano. Quantos alunos foram aprovados?",
+    "alternativas": [
+      "25",
+      "10",
+      "35",
+      "30"
+    ],
+    "correta": 3,
+    "explicacao": "Para calcular 3/4 de 40, primeiro dividimos 40 ÷ 4 = 10 (isso é 1/4). Depois multiplicamos por 3: 10 × 3 = 30. Trinta alunos foram aprovados.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-07",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Ana comprou um caderno por R$ 7,50 e uma caneta por R$ 3,25. Quanto ela gastou no total?",
+    "alternativas": [
+      "R$ 10,25",
+      "R$ 11,75",
+      "R$ 10,75",
+      "R$ 10,50"
+    ],
+    "correta": 2,
+    "explicacao": "Somamos os centavos: 50 + 25 = 75 centavos. Somamos os reais: 7 + 3 = 10 reais. Total: R$ 10,75.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-08",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma aula começa às 8h 15min e termina às 9h 50min. Quanto tempo dura essa aula?",
+    "alternativas": [
+      "1h 25min",
+      "1h 35min",
+      "1h 45min",
+      "2h 05min"
+    ],
+    "correta": 1,
+    "explicacao": "De 8h15 até 9h15 é 1 hora. De 9h15 até 9h50 são 35 minutos. Então a aula dura 1 hora e 35 minutos.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-09",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma fita tem 3 metros de comprimento. Foram usados 125 centímetros dela. Quantos centímetros de fita restaram?",
+    "alternativas": [
+      "185 cm",
+      "165 cm",
+      "175 cm",
+      "225 cm"
+    ],
+    "correta": 2,
+    "explicacao": "Convertemos 3 metros para centímetros: 3 × 100 = 300 cm. Depois subtraímos: 300 − 125 = 175 cm. Restaram 175 centímetros.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-10",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Uma sacola contém 2 kg de arroz e 750 g de feijão. Qual é o peso total da sacola em gramas?",
+    "alternativas": [
+      "2.075 g",
+      "2.750 g",
+      "2.570 g",
+      "2.700 g"
+    ],
+    "correta": 1,
+    "explicacao": "Convertemos 2 kg para gramas: 2 × 1.000 = 2.000 g. Depois somamos: 2.000 + 750 = 2.750 g. A sacola pesa 2.750 gramas.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-11",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Um galão tem 5 litros de água. Uma família usou 1.200 mL para fazer suco. Quantos mililitros de água restaram no galão?",
+    "alternativas": [
+      "3.600 mL",
+      "4.800 mL",
+      "3.800 mL",
+      "3.200 mL"
+    ],
+    "correta": 2,
+    "explicacao": "Convertemos 5 litros para mL: 5 × 1.000 = 5.000 mL. Depois subtraímos: 5.000 − 1.200 = 3.800 mL. Restaram 3.800 mililitros.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-12",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Um jardim tem formato de retângulo com 8 metros de comprimento e 5 metros de largura. Qual é o perímetro desse jardim?",
+    "alternativas": [
+      "40 m",
+      "13 m",
+      "26 m",
+      "30 m"
+    ],
+    "correta": 2,
+    "explicacao": "O perímetro do retângulo é a soma de todos os lados: 8 + 5 + 8 + 5 = 26 m. Podemos calcular também com a fórmula 2 × (8 + 5) = 2 × 13 = 26 metros.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-13",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Quantos lados e quantos vértices tem um hexágono?",
+    "alternativas": [
+      "5 lados e 5 vértices",
+      "6 lados e 6 vértices",
+      "7 lados e 7 vértices",
+      "6 lados e 5 vértices"
+    ],
+    "correta": 1,
+    "explicacao": "O prefixo 'hexa' significa seis. O hexágono tem 6 lados e 6 vértices (pontas/cantos). Um exemplo famoso é a forma das células da colmeia de abelhas.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-14",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é o dobro de 37? Esse resultado é um número par ou ímpar?",
+    "alternativas": [
+      "74; ímpar, pois 37 é ímpar",
+      "74; par, pois termina em 4",
+      "64; par, pois 37 + 27 = 64",
+      "68; par, pois 37 × 2 = 68"
+    ],
+    "correta": 1,
+    "explicacao": "O dobro de 37 é 37 × 2 = 74. O número 74 termina em 4, então é par. Todo número inteiro multiplicado por 2 é par.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-15",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é o antecessor e o sucessor do número 5.999?",
+    "alternativas": [
+      "5.998 e 6.001",
+      "5.997 e 6.000",
+      "5.998 e 6.000",
+      "6.000 e 5.998"
+    ],
+    "correta": 2,
+    "explicacao": "O antecessor é o número de antes: 5.999 − 1 = 5.998. O sucessor é o número de depois: 5.999 + 1 = 6.000. Então antecessor = 5.998 e sucessor = 6.000.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-16",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "A tabela abaixo mostra os pontos feitos por João e Maria em 3 jogos:\n\nJogador | Jogo 1 | Jogo 2 | Jogo 3\nJoão    |   8    |   12   |   10\nMaria   |  15    |    5   |    9\n\nQuem fez mais pontos no total?",
+    "alternativas": [
+      "Maria, com 30 pontos",
+      "João, com 30 pontos",
+      "Empate, com 29 pontos cada",
+      "Maria, com 29 pontos"
+    ],
+    "correta": 1,
+    "explicacao": "Total do João: 8 + 12 + 10 = 30 pontos. Total de Maria: 15 + 5 + 9 = 29 pontos. João fez mais pontos no total (30 > 29).",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-17",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Observe a sequência numérica: 3, 6, 12, 24, ___. Qual é o próximo número?",
+    "alternativas": [
+      "36",
+      "48",
+      "42",
+      "56"
+    ],
+    "correta": 1,
+    "explicacao": "Cada número da sequência é o dobro do anterior: 3 × 2 = 6, 6 × 2 = 12, 12 × 2 = 24, 24 × 2 = 48. O próximo número é 48.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-18",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "A mãe de Lucas tem 38 anos e Lucas tem 11 anos. Há quantos anos a mãe de Lucas nasceu antes dele?",
+    "alternativas": [
+      "29 anos",
+      "27 anos",
+      "49 anos",
+      "25 anos"
+    ],
+    "correta": 1,
+    "explicacao": "Subtraímos as idades: 38 − 11 = 27 anos. A mãe de Lucas nasceu 27 anos antes dele.",
+    "dificuldade": 1
+  },
+  {
+    "id": "mat-19",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é a MAIOR das frações abaixo?\n\n1/2     1/3     3/4     2/3",
+    "alternativas": [
+      "1/2",
+      "2/3",
+      "1/3",
+      "3/4"
+    ],
+    "correta": 3,
+    "explicacao": "Para comparar, transformamos em decimais: 1/2 = 0,50; 1/3 ≈ 0,33; 2/3 ≈ 0,67; 3/4 = 0,75. A maior é 3/4, pois 0,75 é o maior valor.",
+    "dificuldade": 2
+  },
+  {
+    "id": "mat-20",
+    "tema": "matematica",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Carlos comprou 3 pacotes de biscoito, cada um por R$ 4,50, e 2 sucos, cada um por R$ 3,75. Quanto Carlos gastou no total?",
+    "alternativas": [
+      "R$ 22,50",
+      "R$ 21,00",
+      "R$ 20,50",
+      "R$ 19,50"
+    ],
+    "correta": 1,
+    "explicacao": "Biscoitos: 3 × R$ 4,50 = R$ 13,50. Sucos: 2 × R$ 3,75 = R$ 7,50. Total: R$ 13,50 + R$ 7,50 = R$ 21,00.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-01",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Leia o trecho e responda:\n\n\"A raposa, faminta, avistou um cacho de uvas no alto da parreira. Tentou alcançá-lo várias vezes, mas não conseguiu. Afastando-se, disse: — Essas uvas estão verdes e amargas.\"\n\nNessa fábula, qual é a moral que a história quer ensinar?",
+    "alternativas": [
+      "A) Uvas verdes são melhores do que as maduras.",
+      "B) Devemos desistir quando algo é difícil de alcançar.",
+      "C) Às vezes, menosprezamos o que não conseguimos obter.",
+      "D) A raposa é um animal muito inteligente e corajoso."
+    ],
+    "correta": 2,
+    "explicacao": "A raposa não conseguiu as uvas e, para não se sentir mal, disse que eram verdes e ruins. Isso mostra que às vezes a gente faz pouco caso daquilo que não consegue conquistar. Essa é a moral da fábula!",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-02",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Leia a tirinha descrita abaixo:\n\n[Quadro 1] Lucas chega em casa todo sujo de lama e a mãe pergunta: — O que aconteceu com você?\n[Quadro 2] Lucas responde: — Eu caí no campo de futebol, mãe.\n[Quadro 3] A mãe diz: — E o uniforme lavado que eu passei esta manhã?\n[Quadro 4] Lucas pensa: — Silêncio total...\n\nQual sentimento de Lucas é mostrado no último quadro?",
+    "alternativas": [
+      "A) Alegria, porque ganhou o jogo de futebol.",
+      "B) Constrangimento, porque não tinha resposta para dar à mãe.",
+      "C) Raiva, porque a mãe reclamou do uniforme.",
+      "D) Curiosidade, porque queria saber o que a mãe pensava."
+    ],
+    "correta": 1,
+    "explicacao": "Quando Lucas fica em silêncio no último quadro, isso mostra que ele estava sem jeito e sem resposta para dar à mãe, que havia lavado o uniforme de manhã. Esse sentimento é o constrangimento!",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-03",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Leia a notícia e responda:\n\n\"A Prefeitura de Curitiba anunciou a construção de uma nova biblioteca pública no bairro Boqueirão. O espaço terá mais de dois mil livros, computadores e área de leitura infantil. As obras começam em março.\"\n\nQual é o assunto principal dessa notícia?",
+    "alternativas": [
+      "A) A reforma de uma escola no bairro Boqueirão.",
+      "B) A inauguração de uma livraria particular em Curitiba.",
+      "C) A construção de uma nova biblioteca pública em Curitiba.",
+      "D) A compra de computadores para as escolas de Curitiba."
+    ],
+    "correta": 2,
+    "explicacao": "A notícia fala sobre a construção de uma nova biblioteca pública no bairro Boqueirão, em Curitiba. Essa é a ideia principal do texto!",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-04",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual das palavras abaixo está escrita CORRETAMENTE?",
+    "alternativas": [
+      "A) casamento",
+      "B) caçamento",
+      "C) kazamento",
+      "D) cazamento"
+    ],
+    "correta": 0,
+    "explicacao": "A palavra correta é 'casamento', com 's'. Palavras derivadas de 'casa' mantêm o 's'. As outras formas com 'z' ou 'ç' não existem em português.",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-05",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Assinale a frase em que a palavra destacada está escrita CORRETAMENTE quanto ao uso de 'm' antes de 'p' ou 'b':",
+    "alternativas": [
+      "A) O menino estava *infeliz* e ficou calado.",
+      "B) Ele *conprou* um presente para a amiga.",
+      "C) A criança *também* quer brincar.",
+      "D) O *tenpo* está nublado hoje."
+    ],
+    "correta": 2,
+    "explicacao": "Antes das letras 'p' e 'b', usamos sempre 'm' e não 'n'. A palavra 'também' está correta: 'tam-bém'. Já 'conprou' deveria ser 'comprou' e 'tenpo' deveria ser 'tempo'.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-06",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Em qual alternativa o uso de 'porque' / 'por que' está CORRETO?",
+    "alternativas": [
+      "A) Fui à escola por que gosto de estudar.",
+      "B) Fui à escola porque gosto de estudar.",
+      "C) Porque você foi à escola hoje?",
+      "D) Por que ele chegou tarde, ficou de castigo."
+    ],
+    "correta": 1,
+    "explicacao": "'Porque' (junto) é usado para explicar um motivo, como em 'Fui à escola porque gosto de estudar'. 'Por que' (separado) aparece em perguntas, como 'Por que você foi à escola?'.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-07",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Na frase 'O pequeno cachorro late muito alto', as palavras em destaque são, respectivamente:",
+    "alternativas": [
+      "A) Adjetivo e substantivo.",
+      "B) Artigo, adjetivo e substantivo.",
+      "C) Substantivo, adjetivo e verbo.",
+      "D) Artigo, substantivo e adjetivo."
+    ],
+    "correta": 1,
+    "explicacao": "Na frase, 'O' é artigo (acompanha o substantivo), 'pequeno' é adjetivo (descreve o cachorro) e 'cachorro' é substantivo (nome do animal). Então a ordem é: artigo, adjetivo e substantivo.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-08",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual das frases abaixo contém um VERBO?",
+    "alternativas": [
+      "A) Casa bonita e silenciosa.",
+      "B) Menino alegre e esperto.",
+      "C) A criança correu pelo parque.",
+      "D) Uma flor amarela e perfumada."
+    ],
+    "correta": 2,
+    "explicacao": "Verbos são palavras que indicam ação, estado ou fenômeno. Na alternativa C, a palavra 'correu' é um verbo, pois indica a ação que a criança praticou. As outras frases não têm verbos.",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-09",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Passe para o PLURAL a expressão: 'o cidadão feliz'.",
+    "alternativas": [
+      "A) os cidadões felizes",
+      "B) os cidadãos felizes",
+      "C) os cidadãos feliz",
+      "D) os cidadões feliz"
+    ],
+    "correta": 1,
+    "explicacao": "Palavras terminadas em '-ão' geralmente formam o plural em '-ãos', '-ães' ou '-ões'. 'Cidadão' vai para 'cidadãos'. E o adjetivo 'feliz' no plural é 'felizes'. Portanto: os cidadãos felizes.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-10",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é o FEMININO correto da palavra 'ator'?",
+    "alternativas": [
+      "A) atora",
+      "B) atris",
+      "C) atriz",
+      "D) actriz"
+    ],
+    "correta": 2,
+    "explicacao": "O feminino de 'ator' é 'atriz'. Essa é uma exceção: não seguimos a regra comum de só trocar a terminação. 'Atriz' é a forma correta em português.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-11",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é o AUMENTATIVO correto da palavra 'livro'?",
+    "alternativas": [
+      "A) livrinho",
+      "B) livreco",
+      "C) livrão",
+      "D) livrudo"
+    ],
+    "correta": 2,
+    "explicacao": "O aumentativo indica algo grande ou de tamanho maior. 'Livrão' é o aumentativo de 'livro'. Já 'livrinho' é o diminutivo.",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-12",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Separe corretamente as sílabas da palavra 'problema':",
+    "alternativas": [
+      "A) pro-ble-ma",
+      "B) prob-le-ma",
+      "C) p-ro-ble-ma",
+      "D) pro-b-le-ma"
+    ],
+    "correta": 0,
+    "explicacao": "A separação correta é 'pro-ble-ma'. O grupo 'bl' é um dígrafo consonantal que não se separa, ficando junto com a vogal seguinte. A palavra tem 3 sílabas.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-13",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual é a SÍLABA TÔNICA (a sílaba mais forte) da palavra 'sábado'?",
+    "alternativas": [
+      "A) do",
+      "B) ba",
+      "C) sá",
+      "D) sá-ba"
+    ],
+    "correta": 2,
+    "explicacao": "A sílaba tônica é a que pronunciamos com mais força. Em 'sá-ba-do', a sílaba mais forte é 'sá'. Por isso, a palavra tem acento escrito nessa sílaba.",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-14",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual das palavras abaixo NÃO precisa de acento gráfico?",
+    "alternativas": [
+      "A) café",
+      "B) avó",
+      "C) mesa",
+      "D) pé"
+    ],
+    "correta": 2,
+    "explicacao": "'Mesa' é uma palavra paroxítona (sílaba tônica na penúltima sílaba) terminada em 'a', e não leva acento. Já 'café', 'avó' e 'pé' são oxítonas ou monossílabas tônicas que precisam de acento.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-15",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual palavra é SINÔNIMO de 'alegre'?",
+    "alternativas": [
+      "A) triste",
+      "B) cansado",
+      "C) feliz",
+      "D) bravo"
+    ],
+    "correta": 2,
+    "explicacao": "Sinônimos são palavras com sentido parecido. 'Feliz' tem o mesmo sentido de 'alegre'. Já 'triste' é o antônimo (contrário) de 'alegre'.",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-16",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual palavra é ANTÔNIMO de 'generoso'?",
+    "alternativas": [
+      "A) bondoso",
+      "B) caridoso",
+      "C) gentil",
+      "D) mesquinho"
+    ],
+    "correta": 3,
+    "explicacao": "Antônimos são palavras com sentido oposto. 'Mesquinho' significa alguém que não gosta de dar ou compartilhar, portanto é o contrário de 'generoso'. As outras palavras têm sentido parecido com generoso.",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-17",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Assinale a alternativa em que a pontuação está usada CORRETAMENTE:",
+    "alternativas": [
+      "A) Comprei pão leite e queijo.",
+      "B) Comprei, pão, leite, e queijo.",
+      "C) Comprei pão, leite e queijo.",
+      "D) Comprei: pão leite, e queijo."
+    ],
+    "correta": 2,
+    "explicacao": "Quando listamos itens em uma frase, usamos vírgula para separá-los. Antes do último item com 'e', não se usa vírgula. O correto é: 'Comprei pão, leite e queijo.'",
+    "dificuldade": 2
+  },
+  {
+    "id": "port-18",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual sinal de pontuação deve completar corretamente a frase abaixo?\n\n'Que dia lindo ___'",
+    "alternativas": [
+      "A) ?",
+      "B) .",
+      "C) ,",
+      "D) !"
+    ],
+    "correta": 3,
+    "explicacao": "A frase 'Que dia lindo' é uma exclamação, ou seja, expressa admiração e entusiasmo. Por isso, o sinal correto é o ponto de exclamação (!).",
+    "dificuldade": 1
+  },
+  {
+    "id": "port-19",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Leia a frase e identifique o sentido da palavra destacada:\n\n'Depois da corrida, o atleta estava com o rosto *aberto*.'",
+    "alternativas": [
+      "A) O rosto estava sem expressão, parado.",
+      "B) O rosto tinha um corte ou ferida.",
+      "C) O rosto estava com sorriso e expressão alegre.",
+      "D) O rosto estava fechado e contraído."
+    ],
+    "correta": 2,
+    "explicacao": "Nesse contexto, 'rosto aberto' significa uma expressão alegre e sorridente. As palavras podem ter sentidos diferentes dependendo da frase em que estão. Aqui, 'aberto' não significa literalmente algo que foi aberto.",
+    "dificuldade": 3
+  },
+  {
+    "id": "port-20",
+    "tema": "portugues",
+    "ano": 2026,
+    "fonte": "Banco CPM-PR 6º ano",
+    "tipo": "objetiva",
+    "enunciado": "Qual das palavras abaixo é um SUBSTANTIVO?",
+    "alternativas": [
+      "A) correr",
+      "B) bonita",
+      "C) amizade",
+      "D) rapidamente"
+    ],
+    "correta": 2,
+    "explicacao": "Substantivos são palavras que nomeiam seres, sentimentos, lugares e coisas. 'Amizade' é um substantivo abstrato, pois nomeia um sentimento. 'Correr' é verbo, 'bonita' é adjetivo e 'rapidamente' é advérbio.",
+    "dificuldade": 1
+  }
+]
